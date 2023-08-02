@@ -8,6 +8,7 @@ public class Wizard extends Hero {
 
     public Wizard(String name) {
         super(name);
+        this.level = 1;
         this.validArmorTypes = new ArrayList<>();
         this.validWeaponTypes = new ArrayList<>();
 
