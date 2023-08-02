@@ -13,23 +13,25 @@ public class App {
         Hero wizard = new Wizard("Wizard");
         wizard.display();
         wizard.levelUp();
+        System.out.println(wizard.display());
         System.out.println();
 
         Hero archer = new Archer("Archer");
         archer.levelUp();
         archer.levelUp();
         archer.levelUp();
-        archer.display();
+        System.out.println(archer.display());
         System.out.println();
 
         Hero barbarian = new Barbarian("Barbarian");
         barbarian.levelUp();
-        barbarian.display();
+        System.out.println(barbarian.display());
         System.out.println();
 
         Hero swashbuckler = new Swashbuckler("Swashbuckler");
         swashbuckler.levelUp();
-        swashbuckler.display();
+        System.out.println(swashbuckler.display());
         System.out.println();
+
     }
 }

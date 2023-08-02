@@ -41,9 +41,16 @@ public abstract class Hero {
         return this.levelAttributes;
     }
 
-    public void display() {
-        System.out.println("Hero - " + name + ", Level: " + level);
-        System.out.println("Attributes: " + getTotalAttributes());
-        System.out.println("Equipment: " + equipment);
+    public String display() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Name: ").append(name).append("\n");
+        sb.append("Level: ").append(level).append("\n");
+        sb.append("Class: ").append(getClass().getSimpleName()).append("\n");
+
+        sb.append("Total strength: ").append(levelAttributes.getStrength()).append("\n");
+        sb.append("Total dexterity: ").append(levelAttributes.getDexterity()).append("\n");
+        sb.append("Total intelligence: ").append(levelAttributes.getIntelligence()).append("\n");
+        sb.append("Equipment: ").append(equipment);
+        return sb.toString();
     }
 }
