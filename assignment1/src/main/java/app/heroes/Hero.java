@@ -7,31 +7,43 @@ import app.heroAttributes.HeroAttributes;
 
 public abstract class Hero {
 
-    private String name;
-    private int level;
-    private Equipment equipment;
-    private HeroAttributes heroAttributes;
-    private ArrayList<String> validWeaponTypes;
-    private ArrayList<String> validArmorTypes;
+    protected String name;
+    protected int level;
+    protected Equipment equipment;
+    protected HeroAttributes levelAttributes;
+    protected ArrayList<String> validWeaponTypes;
+    protected ArrayList<String> validArmorTypes;
 
     public Hero(String name) {
         this.name = name;
         this.level = 1;
         this.equipment = new Equipment();
-        this.heroAttributes = new HeroAttributes(0, 0, 0);
-        this.validWeaponTypes = new ArrayList<String>();
-        this.validArmorTypes = new ArrayList<String>();
+        this.levelAttributes = new HeroAttributes(0, 0, 0);
     }
 
     public abstract void levelUp();
 
-    public abstract void equipArmor(String armorType);
+    public void equipArmor(String armorType) {
+        if (validArmorTypes.contains(armorType)) {
 
-    public abstract void equipWeapon(String weaponType);
+        }
+    }
+
+    public void equipWeapon(String weaponType) {
+        if (validWeaponTypes.contains(weaponType)) {
+
+        }
+    }
 
     public abstract void damage(int damage);
 
-    public abstract HeroAttributes getTotalAttributes();
+    public HeroAttributes getTotalAttributes() {
+        return this.levelAttributes;
+    }
 
-    public abstract void display();
+    public void display() {
+        System.out.println("Hero - " + name + ", Level: " + level);
+        System.out.println("Attributes: " + getTotalAttributes());
+        System.out.println("Equipment: " + equipment);
+    }
 }
