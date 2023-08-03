@@ -12,6 +12,6 @@ public class Barbarian extends Hero {
     @Override
     public void levelUp() {
         super.levelUp();
-        this.levelAttributes.addAttributes(new HeroAttribute(1, 1, 5));
+        this.levelAttributes.addAttributes(new HeroAttribute(3, 2, 1));
     }
 }
