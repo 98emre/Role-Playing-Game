@@ -14,6 +14,7 @@ public class App {
         wizard.display();
         wizard.levelUp();
         System.out.println(wizard.display());
+        System.out.println("Ksss: " + wizard.calculateTotalAttributes());
         System.out.println();
 
         Hero archer = new Archer("Archer");

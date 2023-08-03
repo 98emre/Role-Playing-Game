@@ -34,4 +34,10 @@ public class Swashbuckler extends Hero {
         throw new UnsupportedOperationException("Unimplemented method 'calculateDamage'");
     }
 
+    @Override
+    public HeroAttribute calculateTotalAttributes() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calculateTotalAttributes'");
+    }
+
 }

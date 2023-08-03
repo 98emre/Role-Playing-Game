@@ -31,9 +31,7 @@ public abstract class Hero {
 
     public abstract int calculateDamage();
 
-    public HeroAttribute getTotalAttributes() {
-        return this.levelAttributes;
-    }
+    public abstract HeroAttribute calculateTotalAttributes();
 
     public String display() {
         StringBuilder sb = new StringBuilder();

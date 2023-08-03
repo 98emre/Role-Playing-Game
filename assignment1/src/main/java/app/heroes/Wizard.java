@@ -36,4 +36,13 @@ public class Wizard extends Hero {
         throw new UnsupportedOperationException("Unimplemented method 'calculateDamage'");
     }
 
+    @Override
+    public HeroAttribute calculateTotalAttributes() {
+        int totalStrength = this.levelAttributes.getStrength();
+        int totalDexterity = this.levelAttributes.getDexterity();
+        int totalIntelligence = this.levelAttributes.getIntelligence();
+
+        return new HeroAttribute(totalStrength, totalDexterity, totalIntelligence);
+    }
+
 }
