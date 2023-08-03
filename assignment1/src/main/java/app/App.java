@@ -2,6 +2,7 @@ package app;
 
 import app.Items.ArmorType;
 import app.Items.Item;
+import app.Items.Slot;
 import app.Items.WeaponType;
 import app.equipment.Armor;
 import app.equipment.Equipment;
@@ -20,8 +21,8 @@ public class App {
         Item weapon1 = new Weapon("Wand", 1, WeaponType.WANDS, 10);
         Item weapon2 = new Weapon("Bows", 1, WeaponType.BOWS, 20);
 
-        Item armor1 = new Armor("Cloth", 2, ArmorType.CLOTH, new HeroAttribute(10, 10, 10));
-        Item armor2 = new Armor("Mail", 1, ArmorType.MAIL, new HeroAttribute(20, 20, 20));
+        Item armor1 = new Armor("Cloth", 2, ArmorType.CLOTH, Slot.HEAD, new HeroAttribute(10, 10, 10));
+        Item armor2 = new Armor("Mail", 1, ArmorType.MAIL, Slot.LEGS, new HeroAttribute(20, 20, 20));
 
         Equipment equipments = new Equipment();
         equipments.equipItem(weapon1);

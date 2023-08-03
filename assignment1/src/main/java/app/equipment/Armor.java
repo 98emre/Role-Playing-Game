@@ -10,8 +10,8 @@ public class Armor extends Item {
     private ArmorType armorType;
     private HeroAttribute armorAttribute;
 
-    public Armor(String name, int requiredLevel, ArmorType armorType, HeroAttribute armorAttribute) {
-        super(name, requiredLevel, getArmorSlot(armorType));
+    public Armor(String name, int requiredLevel, ArmorType armorType, Slot slot, HeroAttribute armorAttribute) {
+        super(name, requiredLevel, slot);
         this.armorType = armorType;
         this.armorAttribute = armorAttribute;
     }
@@ -30,21 +30,6 @@ public class Armor extends Item {
 
     public void setArmorAttribute(HeroAttribute armorAttribute) {
         this.armorAttribute = armorAttribute;
-    }
-
-    private static Slot getArmorSlot(ArmorType armorType) {
-        switch (armorType) {
-            case CLOTH:
-                return Slot.BODY;
-            case LEATHER:
-                return Slot.BODY;
-            case MAIL:
-                return Slot.BODY;
-            case PLATE:
-                return Slot.BODY;
-            default:
-                return null;
-        }
     }
 
     @Override

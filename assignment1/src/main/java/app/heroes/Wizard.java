@@ -6,6 +6,7 @@ import java.util.Arrays;
 import app.Items.ArmorType;
 import app.Items.WeaponType;
 import app.equipment.Armor;
+import app.equipment.Equipment;
 import app.equipment.Weapon;
 import app.heroAttributes.HeroAttribute;
 
@@ -25,25 +26,18 @@ public class Wizard extends Hero {
     }
 
     @Override
-    public void equipArmor(String armorType) {
-        ArmorType type = ArmorType.valueOf(armorType.toUpperCase());
-        Armor armor = new Armor(armorType, 1, type, levelAttributes);
-
+    public void equipArmor(String armor) {
         System.out.println(armor);
     }
 
     @Override
-    public void equipWeapon(String weaponType) {
-        WeaponType type = WeaponType.valueOf(weaponType.toUpperCase());
-        Weapon weapon = new Weapon(weaponType, 1, type, 0);
-
+    public void equipWeapon(String weapon) {
         System.out.println(weapon);
     }
 
     @Override
     public int calculateDamage() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calculateDamage'");
+        return 0;
     }
 
     @Override
