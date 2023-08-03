@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 import app.Items.ArmorType;
 import app.Items.WeaponType;
+import app.equipment.Armor;
 import app.equipment.Equipment;
+import app.equipment.Weapon;
 import app.heroAttributes.HeroAttribute;
 
 public abstract class Hero {
@@ -27,9 +29,9 @@ public abstract class Hero {
 
     public abstract void levelUp();
 
-    public abstract void equipArmor(String armorType);
+    public abstract void equipArmor(Armor armor);
 
-    public abstract void equipWeapon(String weaponType);
+    public abstract void equipWeapon(Weapon weapon);
 
     public abstract int calculateDamage();
 

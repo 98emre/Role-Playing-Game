@@ -1,5 +1,7 @@
 package app.heroes;
 
+import app.equipment.Armor;
+import app.equipment.Weapon;
 import app.heroAttributes.HeroAttribute;
 
 public class Barbarian extends Hero {
@@ -17,18 +19,6 @@ public class Barbarian extends Hero {
     }
 
     @Override
-    public void equipArmor(String armorType) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'equipArmor'");
-    }
-
-    @Override
-    public void equipWeapon(String weaponType) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'equipWeapon'");
-    }
-
-    @Override
     public int calculateDamage() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'calculateDamage'");
@@ -38,6 +28,18 @@ public class Barbarian extends Hero {
     public HeroAttribute calculateTotalAttributes() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'calculateTotalAttributes'");
+    }
+
+    @Override
+    public void equipArmor(Armor armor) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'equipArmor'");
+    }
+
+    @Override
+    public void equipWeapon(Weapon weapon) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'equipWeapon'");
     }
 
 }

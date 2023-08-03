@@ -26,16 +26,6 @@ public class Wizard extends Hero {
     }
 
     @Override
-    public void equipArmor(String armor) {
-        System.out.println(armor);
-    }
-
-    @Override
-    public void equipWeapon(String weapon) {
-        System.out.println(weapon);
-    }
-
-    @Override
     public int calculateDamage() {
         return 0;
     }
@@ -47,6 +37,26 @@ public class Wizard extends Hero {
         int totalIntelligence = this.levelAttributes.getIntelligence();
 
         return new HeroAttribute(totalStrength, totalDexterity, totalIntelligence);
+    }
+
+    @Override
+    public void equipArmor(Armor armor) {
+        if (validArmorTypes.contains(armor.getArmorType())) {
+            System.out.println("Add armor");
+            return;
+        }
+
+        System.out.println("Error armor");
+    }
+
+    @Override
+    public void equipWeapon(Weapon weapon) {
+        if (validWeaponTypes.contains(weapon.getWeaponType())) {
+            System.out.println("Add weapon");
+            return;
+        }
+
+        System.out.println("Error weapon");
     }
 
 }

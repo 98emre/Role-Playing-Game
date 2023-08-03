@@ -30,13 +30,11 @@ public class App {
         equipments.equipItem(armor1);
         equipments.equipItem(armor2);
 
-        System.out.println(equipments.getEquippedItem());
-
-        Hero wizard = new Wizard("Wizard");
+        Hero wizard = new Wizard("Emre Merlin");
         wizard.display();
         wizard.levelUp();
-
         System.out.println(wizard.display());
+
         System.out.println();
 
     }

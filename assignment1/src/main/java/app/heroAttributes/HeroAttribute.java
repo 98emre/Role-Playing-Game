@@ -44,7 +44,6 @@ public class HeroAttribute {
 
     @Override
     public String toString() {
-        return "HeroAttributes [strength=" + strength + ", dexterity=" + dexterity + ", intelligence=" + intelligence
-                + "]";
+        return "[ strength=" + strength + ", dexterity=" + dexterity + ", intelligence=" + intelligence + "]";
     }
 }
