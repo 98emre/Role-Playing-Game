@@ -47,4 +47,9 @@ public class Armor extends Item {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Armor [armorType=" + armorType + ", armorAttribute=" + armorAttribute + "]";
+    }
+
 }
