@@ -11,7 +11,6 @@ import app.items.Equipment;
 import app.items.Item;
 import app.items.Weapon;
 import app.types.ArmorType;
-import app.types.Slot;
 import app.types.WeaponType;
 
 public abstract class Hero {
@@ -91,7 +90,7 @@ public abstract class Hero {
         sb.append("Total strength: ").append(totalAttributes.getStrength()).append("\n");
         sb.append("Total dexterity: ").append(totalAttributes.getDexterity()).append("\n");
         sb.append("Total intelligence: ").append(totalAttributes.getIntelligence()).append("\n");
-        sb.append("Equipment: ").append(equipments.getEquippedItem());
+        sb.append("\nEquipments: ").append(equipments.toString());
 
         return sb.toString();
     }

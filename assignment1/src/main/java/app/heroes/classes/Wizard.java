@@ -1,6 +1,5 @@
 package app.heroes.classes;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import app.heroAttributes.HeroAttribute;

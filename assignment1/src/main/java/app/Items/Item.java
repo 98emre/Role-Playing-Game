@@ -38,4 +38,8 @@ public abstract class Item {
         this.slot = slot;
     }
 
+    @Override
+    public String toString() {
+        return "[name=" + name + ", slot=" + slot + ", required level=" + requiredLevel + "]";
+    }
 }

@@ -20,14 +20,16 @@ public class App {
         Weapon weapon1 = new Weapon("Wand", 1, WeaponType.WANDS, 10);
         Weapon weapon2 = new Weapon("Bows", 1, WeaponType.BOWS, 20);
 
-        Armor armor1 = new Armor("Cloth", 1, ArmorType.CLOTH, Slot.HEAD, new HeroAttribute(10, 10, 10));
-        Armor armor2 = new Armor("Mail", 2, ArmorType.CLOTH, Slot.LEGS, new HeroAttribute(20, 20, 20));
+        Armor armor1 = new Armor("Cloth Helmet", 1, ArmorType.CLOTH, Slot.HEAD, new HeroAttribute(10, 10, 10));
+        Armor armor2 = new Armor("Cloth Boots", 2, ArmorType.CLOTH, Slot.LEGS, new HeroAttribute(20, 20, 20));
+        Armor armor3 = new Armor("Cloot Chest", 2, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(20, 20, 20));
 
         Hero wizard = new Wizard("Emre Merlin");
         wizard.equipArmor(armor1);
         wizard.levelUp();
         wizard.equipArmor(armor2);
-        wizard.equipArmor(armor2);
+        wizard.equipWeapon(weapon1);
+        wizard.equipArmor(armor3);
 
         System.out.println(wizard.display());
 

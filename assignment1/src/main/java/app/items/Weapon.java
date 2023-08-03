@@ -32,6 +32,10 @@ public class Weapon extends Item {
 
     @Override
     public String toString() {
-        return "Weapon [weaponType=" + weaponType + ", weaponDamage=" + weaponDamage + "]";
+        return "[name= " + name +
+                ", requiredLevel= " + requiredLevel +
+                ", weaponType=" + weaponType +
+                ", weaponDamage=" + weaponDamage +
+                "]";
     }
 }
