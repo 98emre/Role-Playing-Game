@@ -23,11 +23,19 @@ public class Armor extends Item {
         throw new UnsupportedOperationException("Unimplemented method 'checkHeroCanEquip'");
     }
 
-    private static Slot getArmorSlot(ArmorType type) {
-        // Implement the logic to map armor type to the corresponding slot
-        // e.g., CLOTH -> Slot.BODY, LEATHER -> Slot.BODY, etc.
-
-        return null;
+    private static Slot getArmorSlot(ArmorType armorType) {
+        switch (armorType) {
+            case CLOTH:
+                return Slot.BODY;
+            case LEATHER:
+                return Slot.BODY;
+            case MAIL:
+                return Slot.BODY;
+            case PLATE:
+                return Slot.BODY;
+            default:
+                return null;
+        }
     }
 
 }
