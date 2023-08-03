@@ -2,7 +2,7 @@ package app.heroes;
 
 import java.util.ArrayList;
 
-import app.heroAttributes.HeroAttributes;
+import app.heroAttributes.HeroAttribute;
 
 public class Swashbuckler extends Hero {
 
@@ -13,7 +13,7 @@ public class Swashbuckler extends Hero {
         this.validArmorTypes = new ArrayList<>();
         this.validWeaponTypes = new ArrayList<>();
 
-        this.levelAttributes = new HeroAttributes(2, 6, 1);
+        this.levelAttributes = new HeroAttribute(2, 6, 1);
     }
 
     @Override

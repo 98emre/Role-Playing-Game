@@ -1,18 +1,18 @@
 package app.heroAttributes;
 
-public class HeroAttributes {
+public class HeroAttribute {
     private int strength;
     private int dexterity;
     private int intelligence;
 
-    public HeroAttributes(int strength, int dexterity, int intelligence) {
+    public HeroAttribute(int strength, int dexterity, int intelligence) {
         this.strength = strength;
         this.dexterity = dexterity;
         this.intelligence = intelligence;
     }
 
-    public HeroAttributes addAttributes(HeroAttributes otherAttribute) {
-        return new HeroAttributes(
+    public HeroAttribute addAttributes(HeroAttribute otherAttribute) {
+        return new HeroAttribute(
                 this.strength + otherAttribute.strength,
                 this.dexterity + otherAttribute.dexterity,
                 this.intelligence + otherAttribute.intelligence);

@@ -3,14 +3,14 @@ package app.heroes;
 import java.util.ArrayList;
 
 import app.equipment.Equipment;
-import app.heroAttributes.HeroAttributes;
+import app.heroAttributes.HeroAttribute;
 
 public abstract class Hero {
 
     protected String name;
     protected int level;
     protected Equipment equipment;
-    protected HeroAttributes levelAttributes;
+    protected HeroAttribute levelAttributes;
     protected ArrayList<String> validWeaponTypes;
     protected ArrayList<String> validArmorTypes;
 
@@ -18,7 +18,7 @@ public abstract class Hero {
         this.name = name;
         this.level = 1;
         this.equipment = new Equipment();
-        this.levelAttributes = new HeroAttributes(0, 0, 0);
+        this.levelAttributes = new HeroAttribute(0, 0, 0);
     }
 
     public abstract void levelUp();
@@ -37,7 +37,7 @@ public abstract class Hero {
 
     public abstract void damage(int damage);
 
-    public HeroAttributes getTotalAttributes() {
+    public HeroAttribute getTotalAttributes() {
         return this.levelAttributes;
     }
 

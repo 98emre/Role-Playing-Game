@@ -2,7 +2,7 @@ package app.heroes;
 
 import java.util.ArrayList;
 
-import app.heroAttributes.HeroAttributes;
+import app.heroAttributes.HeroAttribute;
 
 public class Wizard extends Hero {
 
@@ -12,7 +12,7 @@ public class Wizard extends Hero {
         this.validArmorTypes = new ArrayList<>();
         this.validWeaponTypes = new ArrayList<>();
 
-        this.levelAttributes = new HeroAttributes(1, 1, 8);
+        this.levelAttributes = new HeroAttribute(1, 1, 8);
     }
 
     @Override

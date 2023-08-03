@@ -3,15 +3,15 @@ package app.equipment;
 import app.Items.ArmorType;
 import app.Items.Item;
 import app.Items.Slot;
-import app.heroAttributes.HeroAttributes;
+import app.heroAttributes.HeroAttribute;
 import app.heroes.Hero;
 
 public class Armor extends Item {
 
     private ArmorType armorType;
-    private HeroAttributes armorAttribute;
+    private HeroAttribute armorAttribute;
 
-    public Armor(String name, int requiredLevel, ArmorType armorType, HeroAttributes armorAttribute) {
+    public Armor(String name, int requiredLevel, ArmorType armorType, HeroAttribute armorAttribute) {
         super(name, requiredLevel, getArmorSlot(armorType));
         this.armorType = armorType;
         this.armorAttribute = armorAttribute;
