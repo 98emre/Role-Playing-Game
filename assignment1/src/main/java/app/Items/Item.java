@@ -14,6 +14,28 @@ public abstract class Item {
         this.slot = slot;
     }
 
-    public abstract void checkHeroCanEquip(Hero hero);
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getRequiredLevel() {
+        return requiredLevel;
+    }
+
+    public void setRequiredLevel(int requiredLevel) {
+        this.requiredLevel = requiredLevel;
+    }
+
+    public Slot getSlot() {
+        return slot;
+    }
+
+    public void setSlot(Slot slot) {
+        this.slot = slot;
+    }
 
 }
