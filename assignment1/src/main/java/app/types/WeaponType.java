@@ -1,4 +1,4 @@
-package app.Items;
+package app.types;
 
 public enum WeaponType {
     HATCHETS,

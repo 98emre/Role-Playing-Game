@@ -1,9 +1,8 @@
-package app.equipment;
+package app.items;
 
-import app.Items.ArmorType;
-import app.Items.Item;
-import app.Items.Slot;
 import app.heroAttributes.HeroAttribute;
+import app.types.ArmorType;
+import app.types.Slot;
 
 public class Armor extends Item {
 

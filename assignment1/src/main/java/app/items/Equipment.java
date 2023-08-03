@@ -1,10 +1,9 @@
-package app.equipment;
+package app.items;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import app.Items.Item;
-import app.Items.Slot;
+import app.types.Slot;
 
 public class Equipment {
 

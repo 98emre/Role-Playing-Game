@@ -1,4 +1,6 @@
-package app.Items;
+package app.items;
+
+import app.types.Slot;
 
 public abstract class Item {
 

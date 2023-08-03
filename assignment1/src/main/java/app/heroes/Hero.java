@@ -2,12 +2,12 @@ package app.heroes;
 
 import java.util.ArrayList;
 
-import app.Items.ArmorType;
-import app.Items.WeaponType;
-import app.equipment.Armor;
-import app.equipment.Equipment;
-import app.equipment.Weapon;
 import app.heroAttributes.HeroAttribute;
+import app.items.Armor;
+import app.items.Equipment;
+import app.items.Weapon;
+import app.types.ArmorType;
+import app.types.WeaponType;
 
 public abstract class Hero {
 

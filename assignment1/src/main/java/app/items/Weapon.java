@@ -1,8 +1,7 @@
-package app.equipment;
+package app.items;
 
-import app.Items.Item;
-import app.Items.Slot;
-import app.Items.WeaponType;
+import app.types.Slot;
+import app.types.WeaponType;
 
 public class Weapon extends Item {
 

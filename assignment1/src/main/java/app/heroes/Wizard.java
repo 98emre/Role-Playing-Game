@@ -3,12 +3,12 @@ package app.heroes;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import app.Items.ArmorType;
-import app.Items.WeaponType;
-import app.equipment.Armor;
-import app.equipment.Equipment;
-import app.equipment.Weapon;
 import app.heroAttributes.HeroAttribute;
+import app.items.Armor;
+import app.items.Equipment;
+import app.items.Weapon;
+import app.types.ArmorType;
+import app.types.WeaponType;
 
 public class Wizard extends Hero {
 
@@ -42,7 +42,7 @@ public class Wizard extends Hero {
     @Override
     public void equipArmor(Armor armor) {
         if (validArmorTypes.contains(armor.getArmorType())) {
-            System.out.println("Add armor");
+            equipment.equipItem(armor);
             return;
         }
 

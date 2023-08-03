@@ -1,8 +1,8 @@
 package app.heroes;
 
-import app.equipment.Armor;
-import app.equipment.Weapon;
 import app.heroAttributes.HeroAttribute;
+import app.items.Armor;
+import app.items.Weapon;
 
 public class Barbarian extends Hero {
 
