@@ -17,10 +17,20 @@ public class Armor extends Item {
         this.armorAttribute = armorAttribute;
     }
 
-    @Override
-    public void checkHeroCanEquip(Hero hero) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'checkHeroCanEquip'");
+    public ArmorType getArmorType() {
+        return armorType;
+    }
+
+    public void setArmorType(ArmorType armorType) {
+        this.armorType = armorType;
+    }
+
+    public HeroAttribute getArmorAttribute() {
+        return armorAttribute;
+    }
+
+    public void setArmorAttribute(HeroAttribute armorAttribute) {
+        this.armorAttribute = armorAttribute;
     }
 
     private static Slot getArmorSlot(ArmorType armorType) {

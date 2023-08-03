@@ -16,10 +16,20 @@ public class Weapon extends Item {
         this.weaponDamage = weaponDamage;
     }
 
-    @Override
-    public void checkHeroCanEquip(Hero hero) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'checkHeroCanEquip'");
+    public WeaponType getWeaponType() {
+        return weaponType;
+    }
+
+    public void setWeaponType(WeaponType weaponType) {
+        this.weaponType = weaponType;
+    }
+
+    public int getWeaponDamage() {
+        return weaponDamage;
+    }
+
+    public void setWeaponDamage(int weaponDamage) {
+        this.weaponDamage = weaponDamage;
     }
 
 }
