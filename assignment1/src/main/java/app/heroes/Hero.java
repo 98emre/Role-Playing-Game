@@ -2,6 +2,8 @@ package app.heroes;
 
 import java.util.ArrayList;
 
+import app.Items.ArmorType;
+import app.Items.WeaponType;
 import app.equipment.Equipment;
 import app.heroAttributes.HeroAttribute;
 
@@ -11,8 +13,8 @@ public abstract class Hero {
     protected int level;
     protected Equipment equipment;
     protected HeroAttribute levelAttributes;
-    protected ArrayList<String> validWeaponTypes;
-    protected ArrayList<String> validArmorTypes;
+    protected ArrayList<WeaponType> validWeaponTypes;
+    protected ArrayList<ArmorType> validArmorTypes;
 
     public Hero(String name) {
         this.name = name;
@@ -43,6 +45,7 @@ public abstract class Hero {
         sb.append("Total dexterity: ").append(levelAttributes.getDexterity()).append("\n");
         sb.append("Total intelligence: ").append(levelAttributes.getIntelligence()).append("\n");
         sb.append("Equipment: ").append(equipment.getEquippedItem());
+
         return sb.toString();
     }
 }

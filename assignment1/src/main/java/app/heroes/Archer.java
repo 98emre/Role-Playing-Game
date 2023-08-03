@@ -13,7 +13,7 @@ public class Archer extends Hero {
     @Override
     public void levelUp() {
         this.level += 1;
-        this.levelAttributes.increaseAttributes(1, 5, 1);
+        this.levelAttributes.addAttributes(new HeroAttribute(1, 5, 1));
     }
 
     @Override

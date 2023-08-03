@@ -13,7 +13,7 @@ public class Swashbuckler extends Hero {
     @Override
     public void levelUp() {
         this.level += 1;
-        this.levelAttributes.increaseAttributes(1, 4, 1);
+        this.levelAttributes.addAttributes(new HeroAttribute(1, 4, 1));
     }
 
     @Override

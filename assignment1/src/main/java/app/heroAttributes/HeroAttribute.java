@@ -18,12 +18,6 @@ public class HeroAttribute {
                 this.intelligence + otherAttribute.intelligence);
     }
 
-    public void increaseAttributes(int strength, int dexterity, int intelligence) {
-        this.strength += strength;
-        this.dexterity += dexterity;
-        this.intelligence += intelligence;
-    }
-
     public int getStrength() {
         return strength;
     }
