@@ -1,6 +1,7 @@
 package app.heroes;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import app.heroAttributes.HeroAttribute;
 import app.items.Armor;
@@ -11,31 +12,40 @@ import app.types.WeaponType;
 
 public abstract class Hero {
 
-    protected String name;
-    protected int level;
-    protected Equipment equipment;
+    private String name;
+    private int level;
+    private Equipment equipment;
     protected HeroAttribute levelAttributes;
-    protected ArrayList<WeaponType> validWeaponTypes;
-    protected ArrayList<ArmorType> validArmorTypes;
+    protected List<WeaponType> validWeaponTypes;
+    protected List<ArmorType> validArmorTypes;
 
     public Hero(String name) {
         this.name = name;
         this.level = 1;
         this.equipment = new Equipment();
-        this.levelAttributes = new HeroAttribute(0, 0, 0);
-        this.validWeaponTypes = new ArrayList<>();
         this.validArmorTypes = new ArrayList<>();
+        this.validWeaponTypes = new ArrayList<>();
     }
 
-    public abstract void levelUp();
+    public void levelUp() {
+        this.level++;
+    }
 
-    public abstract void equipArmor(Armor armor);
+    public void equipArmor(Armor armor) {
 
-    public abstract void equipWeapon(Weapon weapon);
+    }
 
-    public abstract int calculateDamage();
+    public void equipWeapon(Weapon weapon) {
 
-    public abstract HeroAttribute calculateTotalAttributes();
+    }
+
+    public int calculateDamage() {
+        return 0;
+    }
+
+    public HeroAttribute calculateTotalAttributes() {
+        return levelAttributes;
+    }
 
     public String display() {
         StringBuilder sb = new StringBuilder();

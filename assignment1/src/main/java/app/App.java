@@ -8,7 +8,6 @@ import app.heroes.Swashbuckler;
 import app.heroes.Wizard;
 import app.items.Armor;
 import app.items.Equipment;
-import app.items.Item;
 import app.items.Weapon;
 import app.types.ArmorType;
 import app.types.Slot;
@@ -24,16 +23,9 @@ public class App {
         Armor armor1 = new Armor("Cloth", 2, ArmorType.CLOTH, Slot.HEAD, new HeroAttribute(10, 10, 10));
         Armor armor2 = new Armor("Mail", 1, ArmorType.MAIL, Slot.LEGS, new HeroAttribute(20, 20, 20));
 
-        Equipment equipments = new Equipment();
-        equipments.equipItem(weapon1);
-        equipments.equipItem(weapon2);
-        equipments.equipItem(armor1);
-        equipments.equipItem(armor2);
-
         Hero wizard = new Wizard("Emre Merlin");
         wizard.display();
         wizard.levelUp();
-        wizard.equipArmor(armor1);
         System.out.println(wizard.display());
 
         System.out.println();
