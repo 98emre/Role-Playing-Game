@@ -11,11 +11,10 @@ public class HeroAttribute {
         this.intelligence = intelligence;
     }
 
-    public HeroAttribute addAttributes(HeroAttribute otherAttribute) {
-        return new HeroAttribute(
-                this.strength += otherAttribute.strength,
-                this.dexterity += otherAttribute.dexterity,
-                this.intelligence += otherAttribute.intelligence);
+    public void addAttributes(HeroAttribute otherAttribute) {
+        this.strength += otherAttribute.strength;
+        this.dexterity += otherAttribute.dexterity;
+        this.intelligence += otherAttribute.intelligence;
     }
 
     public int getStrength() {

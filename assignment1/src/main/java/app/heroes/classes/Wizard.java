@@ -5,9 +5,6 @@ import java.util.Arrays;
 
 import app.heroAttributes.HeroAttribute;
 import app.heroes.Hero;
-import app.items.Armor;
-import app.items.Equipment;
-import app.items.Weapon;
 import app.types.ArmorType;
 import app.types.WeaponType;
 

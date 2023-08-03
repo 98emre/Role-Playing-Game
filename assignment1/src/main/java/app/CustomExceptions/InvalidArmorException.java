@@ -1,6 +1,6 @@
 package app.customExceptions;
 
-public class InvalidArmorException extends Exception {
+public class InvalidArmorException extends RuntimeException {
 
     public InvalidArmorException(String message) {
         super(message);
