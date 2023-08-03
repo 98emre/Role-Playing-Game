@@ -1,6 +1,7 @@
-package app.heroes;
+package app.heroes.classes;
 
 import app.heroAttributes.HeroAttribute;
+import app.heroes.Hero;
 
 public class Barbarian extends Hero {
 

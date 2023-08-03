@@ -1,4 +1,4 @@
-package app.CustomExceptions;
+package app.customExceptions;
 
 public class InvalidLevelException extends Exception {
 

@@ -1,11 +1,11 @@
 package app;
 
 import app.heroAttributes.HeroAttribute;
-import app.heroes.Archer;
-import app.heroes.Barbarian;
 import app.heroes.Hero;
-import app.heroes.Swashbuckler;
-import app.heroes.Wizard;
+import app.heroes.classes.Archer;
+import app.heroes.classes.Barbarian;
+import app.heroes.classes.Swashbuckler;
+import app.heroes.classes.Wizard;
 import app.items.Armor;
 import app.items.Equipment;
 import app.items.Weapon;

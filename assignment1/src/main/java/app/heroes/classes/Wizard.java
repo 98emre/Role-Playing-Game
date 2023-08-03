@@ -1,9 +1,10 @@
-package app.heroes;
+package app.heroes.classes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import app.heroAttributes.HeroAttribute;
+import app.heroes.Hero;
 import app.items.Armor;
 import app.items.Equipment;
 import app.items.Weapon;
