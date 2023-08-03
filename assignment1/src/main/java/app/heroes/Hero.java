@@ -19,23 +19,17 @@ public abstract class Hero {
         this.level = 1;
         this.equipment = new Equipment();
         this.levelAttributes = new HeroAttribute(0, 0, 0);
+        this.validWeaponTypes = new ArrayList<>();
+        this.validArmorTypes = new ArrayList<>();
     }
 
     public abstract void levelUp();
 
-    public void equipArmor(String armorType) {
-        if (validArmorTypes.contains(armorType)) {
+    public abstract void equipArmor(String armorType);
 
-        }
-    }
+    public abstract void equipWeapon(String weaponType);
 
-    public void equipWeapon(String weaponType) {
-        if (validWeaponTypes.contains(weaponType)) {
-
-        }
-    }
-
-    public abstract void damage(int damage);
+    public abstract int calculateDamage();
 
     public HeroAttribute getTotalAttributes() {
         return this.levelAttributes;

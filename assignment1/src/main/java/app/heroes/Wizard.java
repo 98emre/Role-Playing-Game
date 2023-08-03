@@ -9,9 +9,6 @@ public class Wizard extends Hero {
     public Wizard(String name) {
         super(name);
         this.level = 1;
-        this.validArmorTypes = new ArrayList<>();
-        this.validWeaponTypes = new ArrayList<>();
-
         this.levelAttributes = new HeroAttribute(1, 1, 8);
     }
 
@@ -22,9 +19,21 @@ public class Wizard extends Hero {
     }
 
     @Override
-    public void damage(int damage) {
+    public void equipArmor(String armorType) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'damage'");
+        throw new UnsupportedOperationException("Unimplemented method 'equipArmor'");
+    }
+
+    @Override
+    public void equipWeapon(String weaponType) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'equipWeapon'");
+    }
+
+    @Override
+    public int calculateDamage() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calculateDamage'");
     }
 
 }
