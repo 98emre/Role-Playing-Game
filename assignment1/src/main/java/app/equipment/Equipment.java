@@ -8,18 +8,30 @@ import app.Items.Slot;
 
 public class Equipment {
 
-    private Map<Slot, Item> equippedItem;
+    private Map<Slot, Item> equippedItems;
 
     public Equipment() {
-        equippedItem = new HashMap<>();
-        equippedItem.put(Slot.BODY, null);
-        equippedItem.put(Slot.HEAD, null);
-        equippedItem.put(Slot.LEGS, null);
-        equippedItem.put(Slot.WEAPON, null);
+        equippedItems = new HashMap<>();
+
+        for (Slot slot : Slot.values()) {
+            equippedItems.put(slot, null);
+        }
+    }
+
+    public Map<Slot, Item> getEquippedItem() {
+        return equippedItems;
+    }
+
+    public void setEquippedItem(Map<Slot, Item> equippedItems) {
+        this.equippedItems = equippedItems;
+    }
+
+    public void equipItem(Item item) {
+        equippedItems.put(item.getSlot(), item);
     }
 
     @Override
     public String toString() {
-        return "Equipment [equippedItem=" + equippedItem + "]";
+        return "Equipment [equippedItem=" + equippedItems + "]";
     }
 }

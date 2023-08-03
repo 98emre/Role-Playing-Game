@@ -3,7 +3,6 @@ package app.equipment;
 import app.Items.Item;
 import app.Items.Slot;
 import app.Items.WeaponType;
-import app.heroes.Hero;
 
 public class Weapon extends Item {
 

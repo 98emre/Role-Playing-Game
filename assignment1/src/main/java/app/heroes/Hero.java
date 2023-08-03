@@ -42,7 +42,7 @@ public abstract class Hero {
         sb.append("Total strength: ").append(levelAttributes.getStrength()).append("\n");
         sb.append("Total dexterity: ").append(levelAttributes.getDexterity()).append("\n");
         sb.append("Total intelligence: ").append(levelAttributes.getIntelligence()).append("\n");
-        sb.append("Equipment: ").append(equipment);
+        sb.append("Equipment: ").append(equipment.getEquippedItem());
         return sb.toString();
     }
 }

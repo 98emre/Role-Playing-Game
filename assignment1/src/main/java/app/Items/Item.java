@@ -1,7 +1,5 @@
 package app.Items;
 
-import app.heroes.Hero;
-
 public abstract class Item {
 
     protected String name;

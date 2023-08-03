@@ -4,7 +4,6 @@ import app.Items.ArmorType;
 import app.Items.Item;
 import app.Items.Slot;
 import app.heroAttributes.HeroAttribute;
-import app.heroes.Hero;
 
 public class Armor extends Item {
 
