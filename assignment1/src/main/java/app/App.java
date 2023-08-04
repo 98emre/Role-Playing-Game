@@ -25,11 +25,11 @@ public class App {
         Armor armor3 = new Armor("Cloot Chest", 2, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(20, 20, 20));
 
         Hero wizard = new Wizard("Emre Merlin");
-        wizard.equipArmor(armor1);
+        wizard.equip(armor1);
         wizard.levelUp();
-        wizard.equipArmor(armor2);
-        wizard.equipWeapon(weapon1);
-        wizard.equipArmor(armor3);
+        wizard.equip(armor2);
+        wizard.equip(weapon1);
+        wizard.equip(armor3);
 
         System.out.println(wizard.display());
 

@@ -34,7 +34,7 @@ public abstract class Hero {
         this.level++;
     }
 
-    public void equipArmor(Armor armor) {
+    public void equip(Armor armor) {
         if (armor.getRequiredLevel() > this.level) {
             throw new InvalidWeaponException("You are low level for using this armor (" + armor.getName() + ")");
         }
@@ -46,7 +46,7 @@ public abstract class Hero {
         equipments.equipItem(armor);
     }
 
-    public void equipWeapon(Weapon weapon) {
+    public void equip(Weapon weapon) {
         if (weapon.getRequiredLevel() > this.level) {
             throw new InvalidWeaponException("You are low level for using this weapon");
         }
@@ -75,7 +75,6 @@ public abstract class Hero {
             }
         }
 
-        System.out.println(equipments.getEquippedItem());
         return total;
     }
 
