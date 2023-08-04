@@ -11,6 +11,7 @@ import app.items.Equipment;
 import app.items.Item;
 import app.items.Weapon;
 import app.types.ArmorType;
+import app.types.Slot;
 import app.types.WeaponType;
 
 public abstract class Hero {
@@ -58,13 +59,10 @@ public abstract class Hero {
         equipments.equipItem(weapon);
     }
 
-    public int damage() {
-        return 0;
-    }
-
     public HeroAttribute totalAttributes() {
 
-        HeroAttribute total = levelAttributes;
+        HeroAttribute total = new HeroAttribute(levelAttributes.getStrength(), levelAttributes.getDexterity(),
+                levelAttributes.getIntelligence());
 
         for (Item item : equipments.getEquippedItem().values()) {
             if (item != null) {
@@ -78,6 +76,23 @@ public abstract class Hero {
         return total;
     }
 
+    public double calculateDamage() {
+        double weaponDamage = 1;
+        Item equippedWeapon = equipments.getEquippedItem().get(Slot.WEAPON);
+
+        if (equippedWeapon != null && equippedWeapon instanceof Weapon) {
+            weaponDamage = ((Weapon) equippedWeapon).getWeaponDamage();
+        }
+
+        int damageAttribute = getDamageAttribute(totalAttributes());
+        double result = weaponDamage * (1 + damageAttribute / 100.0);
+
+        return Math.round(result * 10.0) / 10.0; // round to first decimal
+
+    }
+
+    protected abstract int getDamageAttribute(HeroAttribute totalAttributes);
+
     public String display() {
         StringBuilder sb = new StringBuilder();
         HeroAttribute totalAttributes = totalAttributes();
@@ -89,6 +104,7 @@ public abstract class Hero {
         sb.append("Total strength: ").append(totalAttributes.getStrength()).append("\n");
         sb.append("Total dexterity: ").append(totalAttributes.getDexterity()).append("\n");
         sb.append("Total intelligence: ").append(totalAttributes.getIntelligence()).append("\n");
+        sb.append("Damage: ").append(calculateDamage()).append("\n");
         sb.append("\nEquipments: ").append(equipments.toString());
 
         return sb.toString();
