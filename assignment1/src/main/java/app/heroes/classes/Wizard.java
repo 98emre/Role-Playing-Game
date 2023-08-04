@@ -21,4 +21,9 @@ public class Wizard extends Hero {
         super.levelUp();
         this.levelAttributes.addAttributes(new HeroAttribute(1, 1, 5));
     }
+
+    @Override
+    protected int getDamageAttribute(HeroAttribute totalAttributes) {
+        return totalAttributes.getIntelligence();
+    }
 }

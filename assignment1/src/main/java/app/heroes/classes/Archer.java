@@ -16,4 +16,9 @@ public class Archer extends Hero {
         this.levelAttributes.addAttributes(new HeroAttribute(1, 5, 1));
     }
 
+    @Override
+    protected int getDamageAttribute(HeroAttribute totalAttributes) {
+        return totalAttributes.getDexterity();
+    }
+
 }

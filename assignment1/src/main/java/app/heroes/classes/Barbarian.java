@@ -15,4 +15,9 @@ public class Barbarian extends Hero {
         super.levelUp();
         this.levelAttributes.addAttributes(new HeroAttribute(3, 2, 1));
     }
+
+    @Override
+    protected int getDamageAttribute(HeroAttribute totalAttributes) {
+        return totalAttributes.getStrength();
+    }
 }

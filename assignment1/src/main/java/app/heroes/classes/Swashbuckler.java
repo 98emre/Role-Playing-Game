@@ -15,4 +15,9 @@ public class Swashbuckler extends Hero {
         super.levelUp();
         this.levelAttributes.addAttributes(new HeroAttribute(1, 4, 1));
     }
+
+    @Override
+    protected int getDamageAttribute(HeroAttribute totalAttributes) {
+        return totalAttributes.getDexterity();
+    }
 }
