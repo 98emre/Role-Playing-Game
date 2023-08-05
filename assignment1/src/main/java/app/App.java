@@ -7,7 +7,6 @@ import app.heroes.classes.Barbarian;
 import app.heroes.classes.Swashbuckler;
 import app.heroes.classes.Wizard;
 import app.items.Armor;
-import app.items.Equipment;
 import app.items.Weapon;
 import app.types.ArmorType;
 import app.types.Slot;
