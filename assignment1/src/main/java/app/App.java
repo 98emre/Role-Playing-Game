@@ -18,23 +18,24 @@ public class App {
         System.out.println();
 
         Weapon weapon1 = new Weapon("Wand", 1, WeaponType.WANDS, 10);
-        Weapon weapon2 = new Weapon("Bows", 1, WeaponType.BOWS, 20);
+        Weapon weapon2 = new Weapon("Staff", 3, WeaponType.STAFFS, 20);
 
         Armor armor1 = new Armor("Cloth Helmet", 1, ArmorType.CLOTH, Slot.HEAD, new HeroAttribute(10, 10, 10));
         Armor armor2 = new Armor("Cloth Boots", 2, ArmorType.CLOTH, Slot.LEGS, new HeroAttribute(20, 20, 20));
-        Armor armor3 = new Armor("Cloot Chest", 2, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(20, 20, 20));
+        Armor armor3 = new Armor("Cloth Chest", 2, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(20, 20, 20));
 
         Hero wizard = new Wizard("Emre Merlin");
-        Weapon weapon = new Weapon("Common fire wand", 1, WeaponType.DAGGERS, 10);
-        Armor armor = new Armor("Common", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
 
-        wizard.equip(weapon);
-        wizard.equip(armor);
+        wizard.equip(weapon1);
+        wizard.equip(armor1);
         wizard.levelUp();
+        wizard.equip(armor2);
+        wizard.equip(armor3);
+        wizard.levelUp();
+        wizard.levelUp();
+        wizard.equip(weapon2);
 
-        double damage = wizard.calculateDamage();
-
-        System.out.println(damage);
+        System.out.println(wizard.display());
 
     }
 }
