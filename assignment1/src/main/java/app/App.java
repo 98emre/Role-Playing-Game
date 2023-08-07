@@ -1,7 +1,5 @@
 package app;
 
-import static org.junit.Assert.assertTrue;
-
 import app.heroAttributes.HeroAttribute;
 import app.heroes.Hero;
 import app.heroes.classes.Archer;
