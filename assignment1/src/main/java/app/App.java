@@ -24,13 +24,16 @@ public class App {
         Armor armor3 = new Armor("Cloot Chest", 2, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(20, 20, 20));
 
         Hero wizard = new Wizard("Emre Merlin");
-        wizard.equip(armor1);
-        wizard.levelUp();
-        wizard.equip(armor2);
-        wizard.equip(weapon1);
-        wizard.equip(armor3);
+        Weapon weapon = new Weapon("Common fire wand", 1, WeaponType.DAGGERS, 10);
+        Armor armor = new Armor("Common", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
 
-        System.out.println(wizard.display());
+        wizard.equip(weapon);
+        wizard.equip(armor);
+        wizard.levelUp();
+
+        double damage = wizard.calculateDamage();
+
+        System.out.println(damage);
 
     }
 }

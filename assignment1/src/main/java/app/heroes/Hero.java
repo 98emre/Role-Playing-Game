@@ -31,13 +31,25 @@ public abstract class Hero {
         this.validWeaponTypes = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public boolean isEquipped(Item item) {
+        return equipments.getEquippedItem().values().contains(item);
+    }
+
     public void levelUp() {
         this.level++;
     }
 
     public void equip(Armor armor) {
         if (armor.getRequiredLevel() > this.level) {
-            throw new InvalidWeaponException("You are low level for using this armor (" + armor.getName() + ")");
+            throw new InvalidArmorException("You are low level for using this armor (" + armor.getName() + ")");
         }
 
         if (!validArmorTypes.contains(armor.getArmorType())) {
@@ -53,7 +65,7 @@ public abstract class Hero {
         }
 
         if (!validWeaponTypes.contains(weapon.getWeaponType())) {
-            throw new InvalidArmorException("You can't use this " + weapon.getName() + " has a weapon");
+            throw new InvalidWeaponException("You can't use this " + weapon.getName() + " has a weapon");
         }
 
         equipments.equipItem(weapon);
@@ -87,7 +99,7 @@ public abstract class Hero {
         int damageAttribute = getDamageAttribute(totalAttributes());
         double result = weaponDamage * (1 + damageAttribute / 100.0);
 
-        return Math.round(result * 10.0) / 10.0; // round to first decimal
+        return Math.round(result * 100.0) / 100.0; // Nearest two decimal
 
     }
 
