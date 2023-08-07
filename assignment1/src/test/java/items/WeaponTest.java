@@ -4,11 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import app.heroAttributes.HeroAttribute;
-import app.items.Armor;
 import app.items.Item;
 import app.items.Weapon;
-import app.types.ArmorType;
 import app.types.Slot;
 import app.types.WeaponType;
 
