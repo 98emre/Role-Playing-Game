@@ -11,7 +11,6 @@ import app.heroAttributes.HeroAttribute;
 import app.heroes.Hero;
 import app.heroes.classes.Wizard;
 import app.items.Armor;
-import app.items.Item;
 import app.items.Weapon;
 import app.types.ArmorType;
 import app.types.Slot;
@@ -31,6 +30,22 @@ public class WizardTest {
     }
 
     @Test
+    public void testWizardGetName() {
+        Hero wizard = new Wizard("Emre Wizard");
+        assertEquals("Emre Wizard", wizard.getName());
+    }
+
+    @Test
+    public void testWizardGetCorrectDamageInCreation() {
+        Hero wizard = new Wizard("Emre Wizard");
+
+        double expectedDamage = 1 * (1 + 8 / 100.0);
+        double actualDamage = wizard.calculateDamage();
+
+        assertTrue(expectedDamage == actualDamage);
+    }
+
+    @Test
     public void testWizardIncreaseLevelUp() {
         Hero wizard = new Wizard("Emre Wizard");
         wizard.levelUp();
@@ -39,6 +54,19 @@ public class WizardTest {
         int currentLevel = wizard.getLevel();
 
         assertEquals(expectedLevel, currentLevel);
+    }
+
+    @Test
+    public void testWizardIncreaseLevelWithCorrectAttributes() {
+        Hero wizard = new Wizard("Emre Wizard");
+        HeroAttribute expectedAttribute = new HeroAttribute(2, 2, 13);
+
+        wizard.levelUp();
+        HeroAttribute getHeroAttribute = wizard.totalAttributes();
+
+        assertEquals(expectedAttribute.getStrength(), getHeroAttribute.getStrength());
+        assertEquals(expectedAttribute.getDexterity(), getHeroAttribute.getDexterity());
+        assertEquals(expectedAttribute.getIntelligence(), getHeroAttribute.getIntelligence());
     }
 
     @Test
@@ -145,6 +173,70 @@ public class WizardTest {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Common Staff", 1, WeaponType.DAGGERS, 10);
         wizard.equip(weapon);
+    }
+
+    @Test(expected = InvalidArmorException.class)
+    public void testWizardInValidLevelEquipArmor() {
+        Hero wizard = new Wizard("Emre Wizard");
+        Armor armor = new Armor("Common", 2, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
+        wizard.equip(armor);
+    }
+
+    @Test(expected = InvalidWeaponException.class)
+    public void testWizardInValidLevelEquipWeapon() {
+        Hero wizard = new Wizard("Emre Wizard");
+        Weapon weapon = new Weapon("Common Staff", 2, WeaponType.STAFFS, 10);
+        wizard.equip(weapon);
+    }
+
+    @Test
+    public void testWizardReplaceValidEquipArmor() {
+        Hero wizard = new Wizard("Emre Wizard");
+        Armor armor = new Armor("Common body armor", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
+        wizard.equip(armor);
+
+        Armor replaceArmor = new Armor("Rare body armor", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 20));
+        wizard.equip(replaceArmor);
+
+        assertTrue(!wizard.isEquipped(armor));
+        assertTrue(wizard.isEquipped(replaceArmor));
+    }
+
+    @Test
+    public void testWizardReplaceValidEquipWeapon() {
+        Hero wizard = new Wizard("Emre Wizard");
+        Weapon weapon = new Weapon("Common Staff", 1, WeaponType.STAFFS, 10);
+        wizard.equip(weapon);
+
+        Weapon replaceWeapon = new Weapon("Rare Wand", 1, WeaponType.WANDS, 20);
+        wizard.equip(replaceWeapon);
+
+        assertTrue(!wizard.isEquipped(weapon));
+        assertTrue(wizard.isEquipped(replaceWeapon));
+    }
+
+    @Test
+    public void testWizardArmorIncreaseDamageCorrectly() {
+        Hero wizard = new Wizard("Emre Wizard");
+        Armor validArmor = new Armor("Common body", 1, ArmorType.CLOTH, Slot.LEGS, new HeroAttribute(1, 1, 10));
+        wizard.equip(validArmor);
+
+        double expectedDamage = 1 * (1 + 18 / 100.d);
+        double actualDamage = wizard.calculateDamage();
+
+        assertTrue(expectedDamage == actualDamage);
+    }
+
+    @Test
+    public void testWizardWeaponIncreaseDamageCorrectly() {
+        Hero wizard = new Wizard("Emre Wizard");
+        Weapon weapon = new Weapon("Rare wand", 1, WeaponType.WANDS, 10);
+        wizard.equip(weapon);
+
+        double expectedDamage = weapon.getWeaponDamage() * (1 + 8 / 100.d);
+        double actualDamage = wizard.calculateDamage();
+
+        assertTrue(expectedDamage == actualDamage);
     }
 
 }
