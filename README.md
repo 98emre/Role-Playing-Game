@@ -1,6 +1,28 @@
-# Hero Application
+# Hero Creation
 
-Foobar is a Python library for dealing with word pluralization.
+## Descriptions 
+This project is part of Noroff Accelerate program. In this project is create a simple role-playing game mechanic to simulate heroes, their abilities, weapons, and armors. There are various hero classes such as Barbarian, Wizard, etc., each with their unique attributes that effect the damage. The heroes can also be equipped with different weapons and armors, where they are uniq for each hero.
+
+You can use the project to create simple hero classes for example for a game where you can add multiple weapons and equipment and adjust in your way.
+
+## Noroff minimum requirements
+Use plain Java to create a console application: 
+a) Various hero classes having attributes which increase at different rates as the character gains levels.
+b) Equipment, such as armor and weapons, that characters can equip. The equipped items will alter the 
+power of the hero, causing it to deal more damage and be able to survive longer. Certain heroes can 
+equip certain item types.
+c) Custom exceptions. There are two custom exceptions you are required to write, as detailed in 
+Appendix B.
+d) Testing of the main functionality.
+
+## Technologies used
+Java and Maven.
+
+## Functions
+* Create different hero types.
+* Add limited of weapons and equiqment for the heroes.
+* Damage depends on hereos attributs and equiqments.
+* All test logic handle for one heroe and  the rest were tested for attributes and damage calculation.
 
 ## Java Installation Guide
 
@@ -51,21 +73,59 @@ This should display Maven's version, indicating a successful installation.
 
 ## Usage
 
-```python
-import foobar
+### Example Using Wizard Class 
+```java
+package app;
 
-# returns 'words'
-foobar.pluralize('word')
+import app.heroAttributes.HeroAttribute;
+import app.heroes.Hero;
+import app.heroes.classes.Wizard;
+import app.items.Armor;
+import app.items.Weapon;
+import app.types.ArmorType;
+import app.types.Slot;
+import app.types.WeaponType;
 
+public class App {
+    public static void main(String[] args) {
+        System.out.println();
+
+        Weapon weapon1 = new Weapon("Wand", 1, WeaponType.WANDS, 10);
+        Armor armor1 = new Armor("Cloth Helmet", 1, ArmorType.CLOTH, Slot.HEAD, new HeroAttribute(10, 10, 10));
+        Hero wizard = new Wizard("Emre Merlin");
+
+        wizard.equip(weapon1);
+        wizard.equip(armor1);
+        wizard.levelUp();
+
+        System.out.println(wizard.display());
+
+    }
+}
+```
+### How Compile With Command line
+First you need to open your commandline/terminal and go inside the project folder. 
+
+Step 1: Compile alla java classfiles
+```bash
+javac *.java
 ```
 
-## Contributing
+Step 2: How To Start The Program
+```bash
+java App 
+```
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
+## Status
+Project is finished, but can be more improved.
 
-Please make sure to update tests as appropriate.
+Future improvment: 
+* Add more hero classes and equiqments.
+* Add implementation of fightning with other heroes, where you challenge dummy data of heroes of your own creation.
+* Add spellcast for each heroes and it should be uniq depends on the which hero class.
 
-## License
+## Contribute
+No contribution as this is a assignment.
 
-[MIT](https://choosealicense.com/licenses/mit/)
+## Made by:
+Emre Demirel 
