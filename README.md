@@ -2,9 +2,9 @@
 
 Foobar is a Python library for dealing with word pluralization.
 
-# Java Installation Guide
+## Java Installation Guide
 
-### Step 1: Download Java
+#### Step 1: Download Java
 First download latest version of Java [Java](https://www.oracle.com/java/) to install.
 
 ### Step 2: Verify Installation
@@ -15,15 +15,15 @@ java --version
 ```
 This should display Java's version, indicating a successful installation.
 
-# Maven Installation Guide
+## Maven Installation Guide
 
-### Step 1: Download Maven
+#### Step 1: Download Maven
 First download the latest version of Maven [Maven](https://maven.apache.org/download.cgi).
 
-### Step 2: Installed Maven
+#### Step 2: Installed Maven
 Extract the downloaded file to a suitable location on your computer.
 
-### Step 3: Add Maven To Path
+#### Step 3: Add Maven To Path
 To run Maven in your command line, you need to add Maven bin in your system `PATH` variable.
 
 Windows: 
@@ -40,7 +40,7 @@ export PATH=$PATH:/path/to/maven/bin
 ```
 Replace /path/to/maven with the actual path where you extracted Maven.
 
-### Step 4: Verify Installation
+#### Step 4: Verify Installation
 Open a new command prompt (or terminal) and type:
 
 ```bash
@@ -49,7 +49,7 @@ mvn --version
 
 This should display Maven's version, indicating a successful installation.
 
-# Usage
+## Usage
 
 ```python
 import foobar
@@ -59,13 +59,13 @@ foobar.pluralize('word')
 
 ```
 
-# Contributing
+## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-# License
+## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
