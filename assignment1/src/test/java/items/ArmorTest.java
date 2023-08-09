@@ -20,19 +20,19 @@ public class ArmorTest {
     }
 
     @Test
-    public void test_Armor_Name() {
+    public void test_Armor_Get_Name() {
         Item armor = new Armor("ArmorTest", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 2, 3));
         assertEquals("ArmorTest", armor.getName());
     }
 
     @Test
-    public void test_Armor_RequiredLevel() {
+    public void test_Armor_Required_Level() {
         Item armor = new Armor("ArmorTest", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 2, 3));
         assertEquals(1, armor.getRequiredLevel());
     }
 
     @Test
-    public void test_Armor_ArmorType() {
+    public void test_Armor_Armor_Type() {
         Item armor = new Armor("ArmorTest", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 2, 3));
         ArmorType expectedArmorType = ArmorType.CLOTH;
         ArmorType actualArmorType = ((Armor) armor).getArmorType();
@@ -41,7 +41,7 @@ public class ArmorTest {
     }
 
     @Test
-    public void test_Armor_SlotType() {
+    public void test_Armor_Slot_Type() {
         Item armor = new Armor("ArmorTest", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 2, 3));
         Slot expectedSlotType = Slot.BODY;
         Slot actualSlotType = armor.getSlot();
@@ -50,7 +50,7 @@ public class ArmorTest {
     }
 
     @Test
-    public void test_Armor_Attributes_Strength() {
+    public void test_Armor_Attribute_Strength() {
         Item armor = new Armor("ArmorTest", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 2, 3));
         HeroAttribute expectedAttributes = new HeroAttribute(1, 2, 3);
         HeroAttribute actualAttributes = ((Armor) armor).getArmorAttribute();
@@ -59,7 +59,7 @@ public class ArmorTest {
     }
 
     @Test
-    public void test_Armor_Attributes_Dexterity() {
+    public void test_Armor_Attribute_Dexterity() {
         Item armor = new Armor("ArmorTest", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 2, 3));
         HeroAttribute expectedAttributes = new HeroAttribute(1, 2, 3);
         HeroAttribute actualAttributes = ((Armor) armor).getArmorAttribute();
@@ -68,7 +68,7 @@ public class ArmorTest {
     }
 
     @Test
-    public void test_Armor_Attributes_Intelligence() {
+    public void test_Armor_Attribute_Intelligence() {
         Item armor = new Armor("ArmorTest", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 2, 3));
         HeroAttribute expectedAttributes = new HeroAttribute(1, 2, 3);
         HeroAttribute actualAttributes = ((Armor) armor).getArmorAttribute();
