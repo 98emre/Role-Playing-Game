@@ -12,13 +12,29 @@ import app.heroes.classes.Archer;
 public class ArcherTest {
 
     @Test
-    public void testArcherCreation() {
+    public void testArcherCreationCheckStrengthAttribute() {
         Hero archer = new Archer("Emre Archer");
         HeroAttribute expectedAttributes = new HeroAttribute(1, 7, 1);
         HeroAttribute actualAttributes = archer.totalAttributes();
 
         assertEquals(expectedAttributes.getStrength(), actualAttributes.getStrength());
+    }
+
+    @Test
+    public void testArcherCreationCheckAttributeDexterity() {
+        Hero archer = new Archer("Emre Archer");
+        HeroAttribute expectedAttributes = new HeroAttribute(1, 7, 1);
+        HeroAttribute actualAttributes = archer.totalAttributes();
+
         assertEquals(expectedAttributes.getDexterity(), actualAttributes.getDexterity());
+    }
+
+    @Test
+    public void testArcherCreationCheckAttributeIntelligence() {
+        Hero archer = new Archer("Emre Archer");
+        HeroAttribute expectedAttributes = new HeroAttribute(1, 7, 1);
+        HeroAttribute actualAttributes = archer.totalAttributes();
+
         assertEquals(expectedAttributes.getIntelligence(), actualAttributes.getIntelligence());
     }
 
