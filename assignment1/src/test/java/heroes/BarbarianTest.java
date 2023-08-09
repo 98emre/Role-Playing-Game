@@ -12,13 +12,29 @@ import app.heroes.classes.Barbarian;
 public class BarbarianTest {
 
     @Test
-    public void testBarbarianCreation() {
+    public void testBarbarianCreationCheckStrengthAttribute() {
         Hero barbarian = new Barbarian("Emre Barbarian");
         HeroAttribute expectedAttributes = new HeroAttribute(5, 2, 1);
         HeroAttribute actualAttributes = barbarian.totalAttributes();
 
         assertEquals(expectedAttributes.getStrength(), actualAttributes.getStrength());
+    }
+
+    @Test
+    public void testBarbarianCreationCheckDexterityAttribute() {
+        Hero barbarian = new Barbarian("Emre Barbarian");
+        HeroAttribute expectedAttributes = new HeroAttribute(5, 2, 1);
+        HeroAttribute actualAttributes = barbarian.totalAttributes();
+
         assertEquals(expectedAttributes.getDexterity(), actualAttributes.getDexterity());
+    }
+
+    @Test
+    public void testBarbarianCreationCheckIntelligenceAttribute() {
+        Hero barbarian = new Barbarian("Emre Barbarian");
+        HeroAttribute expectedAttributes = new HeroAttribute(5, 2, 1);
+        HeroAttribute actualAttributes = barbarian.totalAttributes();
+
         assertEquals(expectedAttributes.getIntelligence(), actualAttributes.getIntelligence());
     }
 
@@ -45,7 +61,7 @@ public class BarbarianTest {
     }
 
     @Test
-    public void testBarbarianIncreasedLevelCorrectAttributes() {
+    public void testBarbarianIncreasedLevelStrengthCorrectAttribute() {
         Hero barbarian = new Barbarian("Emre Barbarian");
         barbarian.levelUp();
 
@@ -53,7 +69,27 @@ public class BarbarianTest {
         HeroAttribute expectedAttributes = new HeroAttribute(8, 4, 2);
 
         assertEquals(expectedAttributes.getStrength(), actualAttributes.getStrength());
+    }
+
+    @Test
+    public void testBarbarianIncreasedLevelDexterityCorrectAttribute() {
+        Hero barbarian = new Barbarian("Emre Barbarian");
+        barbarian.levelUp();
+
+        HeroAttribute actualAttributes = barbarian.totalAttributes();
+        HeroAttribute expectedAttributes = new HeroAttribute(8, 4, 2);
+
         assertEquals(expectedAttributes.getDexterity(), actualAttributes.getDexterity());
+    }
+
+    @Test
+    public void testBarbarianIncreasedLevelIntelligenceCorrectAttribute() {
+        Hero barbarian = new Barbarian("Emre Barbarian");
+        barbarian.levelUp();
+
+        HeroAttribute actualAttributes = barbarian.totalAttributes();
+        HeroAttribute expectedAttributes = new HeroAttribute(8, 4, 2);
+
         assertEquals(expectedAttributes.getIntelligence(), actualAttributes.getIntelligence());
     }
 
