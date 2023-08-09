@@ -45,7 +45,7 @@ public class ArcherTest {
     }
 
     @Test
-    public void testArcherIncreasedLevelCorrectAttributesForStrength() {
+    public void testArcherIncreasedLevelCorrectAttributeForStrength() {
         Hero archer = new Archer("Emre Archer");
         archer.levelUp();
 
@@ -56,7 +56,7 @@ public class ArcherTest {
     }
 
     @Test
-    public void testArcherIncreasedLevelCorrectAttributesForDexterity() {
+    public void testArcherIncreasedLevelCorrectAttributeForDexterity() {
         Hero archer = new Archer("Emre Archer");
         archer.levelUp();
 
@@ -67,7 +67,7 @@ public class ArcherTest {
     }
 
     @Test
-    public void testArcherIncreasedLevelCorrectAttributesForIntelligence() {
+    public void testArcherIncreasedLevelCorrectAttributeForIntelligence() {
         Hero archer = new Archer("Emre Archer");
         archer.levelUp();
 
