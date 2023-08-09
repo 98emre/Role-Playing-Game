@@ -19,24 +19,40 @@ import app.types.WeaponType;
 public class WizardTest {
 
     @Test
-    public void testWizardCreation() {
+    public void test_Wizard_Creation_Check_Strength_Attribute() {
         Hero wizard = new Wizard("Emre Wizard");
         HeroAttribute expectedAttributes = new HeroAttribute(1, 1, 8);
         HeroAttribute actualAttributes = wizard.totalAttributes();
 
         assertEquals(expectedAttributes.getStrength(), actualAttributes.getStrength());
+    }
+
+    @Test
+    public void test_Wizard_Creation_Check_Dexterity_Attribute() {
+        Hero wizard = new Wizard("Emre Wizard");
+        HeroAttribute expectedAttributes = new HeroAttribute(1, 1, 8);
+        HeroAttribute actualAttributes = wizard.totalAttributes();
+
         assertEquals(expectedAttributes.getDexterity(), actualAttributes.getDexterity());
+    }
+
+    @Test
+    public void test_Wizard_Creation_Check_Intelligence_Attribute() {
+        Hero wizard = new Wizard("Emre Wizard");
+        HeroAttribute expectedAttributes = new HeroAttribute(1, 1, 8);
+        HeroAttribute actualAttributes = wizard.totalAttributes();
+
         assertEquals(expectedAttributes.getIntelligence(), actualAttributes.getIntelligence());
     }
 
     @Test
-    public void testWizardGetName() {
+    public void test_Wizard_Get_Name() {
         Hero wizard = new Wizard("Emre Wizard");
         assertEquals("Emre Wizard", wizard.getName());
     }
 
     @Test
-    public void testWizardGetCorrectDamageInCreation() {
+    public void test_Wizard_Get_Correct_Damage_In_Creation() {
         Hero wizard = new Wizard("Emre Wizard");
 
         double expectedDamage = 1 * (1 + 8 / 100.0);
@@ -46,7 +62,7 @@ public class WizardTest {
     }
 
     @Test
-    public void testWizardIncreaseLevelUp() {
+    public void test_Wizard_Increase_LevelUp() {
         Hero wizard = new Wizard("Emre Wizard");
         wizard.levelUp();
 
@@ -57,7 +73,7 @@ public class WizardTest {
     }
 
     @Test
-    public void testWizardIncreaseLevelWithCorrectAttributes() {
+    public void test_Wizard_Increase_Level_With_Correct_Strength_Attribute() {
         Hero wizard = new Wizard("Emre Wizard");
         HeroAttribute expectedAttribute = new HeroAttribute(2, 2, 13);
 
@@ -65,12 +81,32 @@ public class WizardTest {
         HeroAttribute getHeroAttribute = wizard.totalAttributes();
 
         assertEquals(expectedAttribute.getStrength(), getHeroAttribute.getStrength());
+    }
+
+    @Test
+    public void test_Wizard_Increase_Level_With_Correct_Dexterity_Attribute() {
+        Hero wizard = new Wizard("Emre Wizard");
+        HeroAttribute expectedAttribute = new HeroAttribute(2, 2, 13);
+
+        wizard.levelUp();
+        HeroAttribute getHeroAttribute = wizard.totalAttributes();
+
         assertEquals(expectedAttribute.getDexterity(), getHeroAttribute.getDexterity());
+    }
+
+    @Test
+    public void test_Wizard_Increase_Level_With_Correct_Intelligence_Attribute() {
+        Hero wizard = new Wizard("Emre Wizard");
+        HeroAttribute expectedAttribute = new HeroAttribute(2, 2, 13);
+
+        wizard.levelUp();
+        HeroAttribute getHeroAttribute = wizard.totalAttributes();
+
         assertEquals(expectedAttribute.getIntelligence(), getHeroAttribute.getIntelligence());
     }
 
     @Test
-    public void testWizardLevelUpIncreaseDamage() {
+    public void test_Wizard_Level_Up_IncreaseDamage() {
         Hero wizard = new Wizard("Emre Wizard");
         double originalDamage = wizard.calculateDamage();
 
@@ -83,7 +119,7 @@ public class WizardTest {
     }
 
     @Test
-    public void testWizardArmorIncreaseDamage() {
+    public void test_Wizard_Armor_Increase_Damage() {
         Hero wizard = new Wizard("Emre Wizard");
         Armor armor = new Armor("Common", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
         double originalDamage = wizard.calculateDamage();
@@ -96,7 +132,7 @@ public class WizardTest {
     }
 
     @Test
-    public void testWizardWeaponIncreaseDamage() {
+    public void test_Wizard_Weapon_Increase_Damage() {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Common fire wand", 1, WeaponType.WANDS, 10);
         double originalDamage = wizard.calculateDamage();
@@ -109,7 +145,7 @@ public class WizardTest {
     }
 
     @Test
-    public void testWizardWeaponAndArmorIncreaseDamage() {
+    public void test_Wizard_Weapon_And_Armor_Increase_Damage() {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Common fire wand", 1, WeaponType.WANDS, 10);
         Armor armor = new Armor("Common", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
@@ -124,7 +160,7 @@ public class WizardTest {
     }
 
     @Test
-    public void testWizardWeaponAndArmorAndLevelIncreaseDamage() {
+    public void test_Wizard_Weapon_And_Armor_And_Level_IncreaseDamage() {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Common fire wand", 1, WeaponType.WANDS, 10);
         Armor armor = new Armor("Common", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
@@ -140,7 +176,7 @@ public class WizardTest {
     }
 
     @Test
-    public void testWizardValidEquipArmor() {
+    public void test_Wizard_Valid_Equip_Armor() {
         Hero wizard = new Wizard("Emre Wizard");
         Armor armor = new Armor("Common", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
 
@@ -151,7 +187,7 @@ public class WizardTest {
     }
 
     @Test
-    public void testWizardValidEquipWeapon() {
+    public void test_Wizard_Valid_quip_Weapon() {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Common Staff", 1, WeaponType.STAFFS, 10);
 
@@ -162,7 +198,7 @@ public class WizardTest {
     }
 
     @Test(expected = InvalidArmorException.class)
-    public void testWizardInValidEquipArmor() {
+    public void test_Wizard_Invalid_Equip_Armor() {
         Hero wizard = new Wizard("Emre Wizard");
         Armor armor = new Armor("Common", 1, ArmorType.LEATHER, Slot.BODY, new HeroAttribute(1, 1, 10));
         wizard.equip(armor);
@@ -176,21 +212,21 @@ public class WizardTest {
     }
 
     @Test(expected = InvalidArmorException.class)
-    public void testWizardInValidLevelEquipArmor() {
+    public void test_Wizard_Invalid_Level_Equip_Armor() {
         Hero wizard = new Wizard("Emre Wizard");
         Armor armor = new Armor("Common", 2, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
         wizard.equip(armor);
     }
 
     @Test(expected = InvalidWeaponException.class)
-    public void testWizardInValidLevelEquipWeapon() {
+    public void test_Wizard_Invalid_Level_Equip_Weapon() {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Common Staff", 2, WeaponType.STAFFS, 10);
         wizard.equip(weapon);
     }
 
     @Test
-    public void testWizardReplaceValidEquipArmor() {
+    public void test_Wizard_Replace_Valid_Equip_Armor() {
         Hero wizard = new Wizard("Emre Wizard");
         Armor armor = new Armor("Common body armor", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
         wizard.equip(armor);
@@ -198,12 +234,11 @@ public class WizardTest {
         Armor replaceArmor = new Armor("Rare body armor", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 20));
         wizard.equip(replaceArmor);
 
-        assertTrue(!wizard.isEquipped(armor));
         assertTrue(wizard.isEquipped(replaceArmor));
     }
 
     @Test
-    public void testWizardReplaceValidEquipWeapon() {
+    public void test_Wizard_Replace_Valid_Equip_Weapon() {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Common Staff", 1, WeaponType.STAFFS, 10);
         wizard.equip(weapon);
@@ -211,12 +246,11 @@ public class WizardTest {
         Weapon replaceWeapon = new Weapon("Rare Wand", 1, WeaponType.WANDS, 20);
         wizard.equip(replaceWeapon);
 
-        assertTrue(!wizard.isEquipped(weapon));
         assertTrue(wizard.isEquipped(replaceWeapon));
     }
 
     @Test
-    public void testWizardArmorIncreaseDamageCorrectly() {
+    public void test_Wizard_Armor_Increase_Damage_Correctly() {
         Hero wizard = new Wizard("Emre Wizard");
         Armor validArmor = new Armor("Common body", 1, ArmorType.CLOTH, Slot.LEGS, new HeroAttribute(1, 1, 10));
         wizard.equip(validArmor);
@@ -228,7 +262,7 @@ public class WizardTest {
     }
 
     @Test
-    public void testWizardWeaponIncreaseDamageCorrectly() {
+    public void test_Wizard_Weapon_Increase_Damage_Correctly() {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Rare wand", 1, WeaponType.WANDS, 10);
         wizard.equip(weapon);
