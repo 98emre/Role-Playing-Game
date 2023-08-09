@@ -62,7 +62,7 @@ public class WizardTest {
     }
 
     @Test
-    public void test_Wizard_Increase_LevelUp() {
+    public void test_Wizard_Increase_Level_Up() {
         Hero wizard = new Wizard("Emre Wizard");
         wizard.levelUp();
 
@@ -73,7 +73,7 @@ public class WizardTest {
     }
 
     @Test
-    public void test_Wizard_Increase_Level_With_Correct_Strength_Attribute() {
+    public void test_Wizard_Increase_Level_Up_With_Correct_Strength_Attribute() {
         Hero wizard = new Wizard("Emre Wizard");
         HeroAttribute expectedAttribute = new HeroAttribute(2, 2, 13);
 
@@ -84,7 +84,7 @@ public class WizardTest {
     }
 
     @Test
-    public void test_Wizard_Increase_Level_With_Correct_Dexterity_Attribute() {
+    public void test_Wizard_Increase_Level_Up_With_Correct_Dexterity_Attribute() {
         Hero wizard = new Wizard("Emre Wizard");
         HeroAttribute expectedAttribute = new HeroAttribute(2, 2, 13);
 
@@ -95,7 +95,7 @@ public class WizardTest {
     }
 
     @Test
-    public void test_Wizard_Increase_Level_With_Correct_Intelligence_Attribute() {
+    public void test_Wizard_Increase_Level_Up_With_Correct_Intelligence_Attribute() {
         Hero wizard = new Wizard("Emre Wizard");
         HeroAttribute expectedAttribute = new HeroAttribute(2, 2, 13);
 
@@ -106,7 +106,7 @@ public class WizardTest {
     }
 
     @Test
-    public void test_Wizard_Level_Up_IncreaseDamage() {
+    public void test_Wizard_Level_Up_Increase_Damage() {
         Hero wizard = new Wizard("Emre Wizard");
         double originalDamage = wizard.calculateDamage();
 
@@ -160,7 +160,7 @@ public class WizardTest {
     }
 
     @Test
-    public void test_Wizard_Weapon_And_Armor_And_Level_IncreaseDamage() {
+    public void test_Wizard_Weapon_And_Armor_And_Level_Increase_Damage() {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Common fire wand", 1, WeaponType.WANDS, 10);
         Armor armor = new Armor("Common", 1, ArmorType.CLOTH, Slot.BODY, new HeroAttribute(1, 1, 10));
@@ -187,7 +187,7 @@ public class WizardTest {
     }
 
     @Test
-    public void test_Wizard_Valid_quip_Weapon() {
+    public void test_Wizard_Valid_Equip_Weapon() {
         Hero wizard = new Wizard("Emre Wizard");
         Weapon weapon = new Weapon("Common Staff", 1, WeaponType.STAFFS, 10);
 

@@ -49,7 +49,7 @@ public class SwashbucklerTest {
     }
 
     @Test
-    public void test_Swashbuckler_Increased_Level_Correct_Damage() {
+    public void test_Swashbuckler_Increased_Level_Up_Correct_Damage() {
         Hero swashbuckler = new Swashbuckler("Emre Swashbuckler");
         double expectedDamage = 1.1;
 
@@ -61,7 +61,7 @@ public class SwashbucklerTest {
     }
 
     @Test
-    public void test_Swashbuckler_Increased_Level_Strength_Correct_Attribute() {
+    public void test_Swashbuckler_Increased_Level_Up_Correct_Attribute_For_Strength() {
         Hero swashbuckler = new Swashbuckler("Emre Archer");
         swashbuckler.levelUp();
 
@@ -72,7 +72,7 @@ public class SwashbucklerTest {
     }
 
     @Test
-    public void test_Swashbuckler_Increased_Level_Dexterity_Correct_Attribute() {
+    public void test_SwashbucklerIncreased_Level_Up_Correct_Attribute_For_Dexterity() {
         Hero swashbuckler = new Swashbuckler("Emre Archer");
         swashbuckler.levelUp();
 
@@ -83,7 +83,7 @@ public class SwashbucklerTest {
     }
 
     @Test
-    public void test_Swashbuckler_Increased_Level_Intelligence_Correct_Attribute() {
+    public void test_SwashbucklerIncreased_Level_Up_Correct_Attribute_For_Intelligence() {
         Hero swashbuckler = new Swashbuckler("Emre Archer");
         swashbuckler.levelUp();
 
