@@ -1,7 +1,7 @@
 # Hero Creation
 
 ## Descriptions 
-This project is part of Noroff Accelerate program. In this project is create a simple role-playing game mechanic to simulate heroes, their abilities, weapons, and armors. There are various hero classes such as Barbarian, Wizard, etc., each with their unique attributes that effect the damage. The heroes can also be equipped with different weapons and armors, where they are uniq for each hero.
+In this project is create a simple role-playing game mechanic to simulate heroes, their abilities, weapons, and armors. There are various hero classes such as Barbarian, Wizard, etc., each with their unique attributes that effect the damage. The heroes can also be equipped with different weapons and armors, where they are uniq for each hero.
 
 You can use the project to create simple hero classes for example for a game where you can add multiple weapons and equipment and adjust in your way.
 
